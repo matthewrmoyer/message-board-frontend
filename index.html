@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app ='app'>
+  <head>
+    <meta charset="utf-8">
+    <title>Reddit Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<script src="https://use.fontawesome.com/57a2949668.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+
+  <body>
+
+  	<navbar></navbar>
+
+    <div class = "secondary-nav">
+      <searchbar></searchbar>
+      <new-post-button></new-post-button>
+    </div>
+    
+    <new-post-form></new-post-form>
+    
+    <posts></posts>
+
+
+
+  	<script src="/node_modules/angular/angular.min.js"></script>
+  	<script src="./app/app.module.js"></script>
+
+    <!-- angular moment -->
+    <script src="./node_modules/moment/moment.js"></script>
+    <script src="./node_modules/angular-moment/angular-moment.js"></script>
+
+
+    <!-- services -->
+    <script src="./app/services/toggleForm.service.js"></script>
+    <script src="./app/services/posts.service.js"></script>
+    <script src="./app/services/searchTerm.service.js"></script>
+
+
+
+    <!-- controllers -->
+  	<script src="./app/navbar/navbar.controller.js"></script>
+    <script src="./app/searchbar/searchbar.controller.js"></script>
+    <script src="./app/new-post-button/new-post-button.controller.js"></script>
+    <script src="./app/new-post-form/new-post-form.controller.js"></script>
+    <script src="./app/posts/posts.controller.js"></script>
+    
+
+  </body>
+</html>

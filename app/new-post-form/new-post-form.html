@@ -1,0 +1,17 @@
+<form novalidate class = "col-xs-12" name = "$ctrl.newPostForm" ng-if="$ctrl.showFormBoolean()" ng-submit="$ctrl.createPost()">
+	<label for="newPostFormTitleInput">Title</label>
+	<input id = "newPostFormTitleInput" type="text" name="titleInput"  ng-model="$ctrl.newPost.title" ng-class="{'form-error': $ctrl.newPostForm.titleInput.$touched && $ctrl.newPostForm.titleInput.$invalid}"required>
+
+	<label for="newPostFormBodyInput">Body</label>
+	<textarea id = "newPostFormBodyInput" name="bodyInput" ng-model="$ctrl.newPost.body" required ng-class="{'form-error': $ctrl.newPostForm.bodyInput.$invalid && $ctrl.newPostForm.bodyInput.$touched}"></textarea>
+
+	<label for="newPostFormAuthorInput">Author</label>
+	<input type="text" name="authorInput"  ng-model="$ctrl.newPost.author" ng-class="{'form-error': $ctrl.newPostForm.authorInput.$invalid && $ctrl.newPostForm.authorInput.$touched}"required>
+
+	<label for="newPostFormImageInput">Image Url</label>
+	<input type="text" name="imageInput"  ng-model="$ctrl.newPost.image" ng-class="{'form-error': $ctrl.newPostForm.imageInput.$invalid && $ctrl.newPostForm.imageInput.$touched}" required>
+
+
+	<button class = "new-post-form-submit-button" ng-class="{'primary-button full-opacity': $ctrl.newPostForm.titleInput.$valid && $ctrl.newPostForm.bodyInput.$valid && $ctrl.newPostForm.authorInput.$valid && $ctrl.newPostForm.imageInput.$valid}">Create Post</button>
+</form>
+

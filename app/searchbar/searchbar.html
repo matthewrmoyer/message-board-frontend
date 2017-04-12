@@ -1,0 +1,5 @@
+<form name = "$ctrl.searchbarForm">
+	<input class = "searchbar-input" type="text" name="searchInput" placeholder="Filter" ng-model="$ctrl.newSearch" ng-keyup="$ctrl.setSearchTerm()">
+</form>
+
+<p>{{$ctrl.searchTerm}}</p>
