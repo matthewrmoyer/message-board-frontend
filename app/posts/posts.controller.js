@@ -6,11 +6,11 @@
 		})
 
 
-	PostsController.$inject = ['postsService', 'searchTermService']
+	PostsController.$inject = ['postsService', 'searchTermService', '$http']
 
 
 
-	function PostsController(postsService , searchTermService) {
+	function PostsController(postsService, searchTermService, $http) {
 		const vm = this
 		vm.posts = posts()
 		vm.downvote = downvote
@@ -25,6 +25,11 @@
 
 		vm.$onInit = function() {
 			console.log(vm.posts)
+
+
+			$http.get('https://angular-message-board-backend.herokuapp.com/posts').then(function(response) {
+				console.log(response.data)
+			})
 		}
 
 		function posts() {
@@ -41,23 +46,19 @@
 			}
 		}
 
-		function createComment(post){
+		function createComment(post) {
 			post.comments.push(post.newComment.body)
 			delete post.newComment
 		}
 
-		function toggleShowCommentFormBoolean(post){
-			post.showCommentFormBoolean ? post.showCommentFormBoolean=false: post.showCommentFormBoolean=true
+		function toggleShowCommentFormBoolean(post) {
+			post.showCommentFormBoolean ? post.showCommentFormBoolean = false : post.showCommentFormBoolean = true
 		}
 
 
-		function searchTerm(){
+		function searchTerm() {
 			return searchTermService.searchTerm
 		}
 	}
 
 })()
-
-
-
-
