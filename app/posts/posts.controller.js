@@ -42,7 +42,12 @@
 		}
 
 		function createComment(post) {
-			post.comments.push(post.newComment.body)
+			post.comments.push({
+				content:post.newComment.body,
+				created_at: new Date(),
+				post_id: post.id
+			})
+			console.log(post.comments)
 			delete post.newComment
 		}
 

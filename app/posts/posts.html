@@ -5,7 +5,7 @@
 </select>
 <div ng-repeat="post in $ctrl.posts | filter: {title: $ctrl.searchTerm()} | orderBy:$ctrl.propertyNameToSortBy">
 	
-	<div class = "single-post-container">
+	<div class = "single-post-container single-post-container-{{post.id}}" data-post-id="{{post.id}}">
 		<div class = "title-and-vote-container">
 			<h3 class = "single-post-title">{{post.title}}</h3>
 			<div class = "vote-button-container">
