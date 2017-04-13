@@ -32,13 +32,18 @@
 		}
 
 		function upvote(post) {
-			post.vote_count++
+			post.vote_count++ //frontend
+			//patch backend
+			postsService.patchPostService(post)
 		}
 
 		function downvote(post) {
+			//frontend
 			if (post.vote_count > 0) {
 				post.vote_count--
 			}
+			//patch backend
+			postsService.patchPostService(post)
 		}
 
 		function createComment(post) {

@@ -33,6 +33,7 @@
 
 		this.createPostService = createPostService
 		this.createCommentService= createCommentService
+		this.patchPostService = patchPostService
 
 		function createPostService(newPost) {
 			console.log('hitting createPost in postsService')
@@ -53,6 +54,16 @@
 
 		function createCommentService(newComment) {
 			$http.post('https://angular-message-board-backend.herokuapp.com/comments', newComment)
+				.then(response => {
+					console.log(response)
+				})
+		}
+
+		function patchPostService(post){
+			var postId = post.id
+			console.log(postId)
+			console.log(post)
+			$http.patch(`https://angular-message-board-backend.herokuapp.com/posts/${postId}`, post)
 				.then(response => {
 					console.log(response)
 				})
