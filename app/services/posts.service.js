@@ -12,9 +12,25 @@
 		$http.get('https://angular-message-board-backend.herokuapp.com/posts')
 		.then(function(response) {
 			response.data.forEach(element =>{
+				element.comments = []
 				vm.posts.push(element)
 			})
 		})
+
+		$http.get('https://angular-message-board-backend.herokuapp.com/comments')
+		.then(function(response) {
+			response.data.forEach(commentElement =>{
+				vm.posts.forEach(postElement => {
+					if(postElement.id == commentElement.post_id){
+						postElement.comments.push(commentElement)
+					}
+				})
+
+			})
+
+		})
+
+
 
 
 		this.createPostService = createPostService

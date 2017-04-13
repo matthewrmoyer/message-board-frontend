@@ -41,7 +41,7 @@
 		<form novalidate class = "col-xs-10" name = "$ctrl.commentForm" ng-submit="$ctrl.createComment(post)" ng-if="post.showCommentFormBoolean">
 			<div class = "comments-container">
 				<div ng-repeat="comment in post.comments" class = "single-comment-container">
-					<p class ="comment"> <span><i class="fa fa-comment" aria-hidden="true"></i> &nbsp {{comment}} </p>
+					<p class ="comment"> <span><i class="fa fa-comment" aria-hidden="true"></i> &nbsp {{comment.content}} </p>
 				</div>
 			</div>
 			
