@@ -6,7 +6,7 @@
 		})
 
 
-	PostsController.$inject = ['postsService', 'searchTermService', '$http']
+	PostsController.$inject = ['postsService', 'searchTermService']
 
 
 
@@ -25,11 +25,6 @@
 
 		vm.$onInit = function() {
 			console.log(vm.posts)
-
-
-			$http.get('https://angular-message-board-backend.herokuapp.com/posts').then(function(response) {
-				console.log(response.data)
-			})
 		}
 
 		function posts() {
