@@ -20,7 +20,7 @@
 		vm.showCommentFormBoolean = false
 		vm.toggleShowCommentFormBoolean = toggleShowCommentFormBoolean
 
-		vm.propertyNameToSortBy = '-voteCount'
+		vm.propertyNameToSortBy = '-vote_count'
 
 
 		vm.$onInit = function() {
@@ -32,12 +32,12 @@
 		}
 
 		function upvote(post) {
-			post.voteCount++
+			post.vote_count++
 		}
 
 		function downvote(post) {
-			if (post.voteCount > 0) {
-				post.voteCount--
+			if (post.vote_count > 0) {
+				post.vote_count--
 			}
 		}
 

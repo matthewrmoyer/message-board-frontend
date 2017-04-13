@@ -21,7 +21,7 @@
 
 		function createPostService(newPost) {
 			console.log('hitting createPost in postsService')
-			newPost.voteCount = 0
+			newPost.vote_count = 0
 			newPost.comments = []
 			newPost.time = new Date()
 			this.posts.push(newPost) //show on page
