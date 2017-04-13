@@ -31,8 +31,6 @@
 		})
 
 
-
-
 		this.createPostService = createPostService
 
 		function createPostService(newPost) {
