@@ -42,12 +42,19 @@
 		}
 
 		function createComment(post) {
-			post.comments.push({
+			//add to frontend
+			var newComment = {
 				content:post.newComment.body,
 				created_at: new Date(),
 				post_id: post.id
-			})
+			}
+
+			post.comments.push(newComment)
 			console.log(post.comments)
+			
+			//add to backend
+			postsService.createCommentService(newComment)
+			//clear form
 			delete post.newComment
 		}
 

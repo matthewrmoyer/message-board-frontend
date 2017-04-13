@@ -32,6 +32,7 @@
 
 
 		this.createPostService = createPostService
+		this.createCommentService= createCommentService
 
 		function createPostService(newPost) {
 			console.log('hitting createPost in postsService')
@@ -44,6 +45,14 @@
 			console.log(newPost)
 				//post to server
 			$http.post('https://angular-message-board-backend.herokuapp.com/posts', newPost)
+				.then(response => {
+					console.log(response)
+				})
+		}
+
+
+		function createCommentService(newComment) {
+			$http.post('https://angular-message-board-backend.herokuapp.com/comments', newComment)
 				.then(response => {
 					console.log(response)
 				})
