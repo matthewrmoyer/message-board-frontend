@@ -1,7 +1,7 @@
 <select class = "sort-select" ng-model="$ctrl.propertyNameToSortBy">
 	<option value ="-vote_count">Sort By Votes</option>
 	<option value="title">Sort By Title</option>
-	<option value="-time">Sort By Time</option>
+	<option value="-created_at">Sort By Time</option>
 </select>
 <div ng-repeat="post in $ctrl.posts | filter: {title: $ctrl.searchTerm()} | orderBy:$ctrl.propertyNameToSortBy">
 	

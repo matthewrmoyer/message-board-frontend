@@ -21,9 +21,10 @@
 
 		function createPostService(newPost) {
 			console.log('hitting createPost in postsService')
+			//set defaults
 			newPost.vote_count = 0
 			newPost.comments = []
-			newPost.time = new Date()
+			newPost.created_at = new Date()
 			this.posts.push(newPost) //show on page
 			//add animation start that starts and ends based on post to server function run
 			console.log(newPost)
