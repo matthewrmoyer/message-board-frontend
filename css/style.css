@@ -51,7 +51,12 @@ navbar {
       color: #7a7a7a;
       cursor: pointer; }
   navbar .navbar-logo {
-    font-size: calc(16px + .5vw); }
+    font-size: calc(calc(16px + .5vw)*1.5);
+    color: #ed7379;
+    transform: rotate(-7deg); }
+    navbar .navbar-logo:hover {
+      transition: all .25s;
+      transform: rotate(0deg); }
 
 .secondary-nav {
   display: flex;
@@ -166,11 +171,15 @@ new-post-form {
   font-size: calc(14px + .5vw);
   color: #1dc8d7;
   margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  user-select: none; }
 
 .single-comment-container {
   margin-bottom: 20px;
   color: black; }
+
+.new-comment-form-textarea:focus {
+  outline: 2px solid #1dc8d7; }
 
 .highlight {
   background-color: orange; }

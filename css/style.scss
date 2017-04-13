@@ -80,7 +80,6 @@ navbar{
 	align-items: center;
 	box-shadow: 0 0 10px 0 $dark-accent;
 
-
 	li{
 		display: inline-flex;
 		align-items: center;
@@ -91,13 +90,20 @@ navbar{
 		padding-right: 5px;
 		padding-left: 2px;
 
+
 		&:hover{
 			color: lighten($text-grey, 20);
 			cursor: pointer
 		}
 	}
 	.navbar-logo{
-		font-size: $single-post-heading-font-size;
+		font-size: calc(#{$single-post-heading-font-size}*1.5);
+		color: $red;
+		transform: rotate(-7deg);
+		&:hover{
+			transition: all .25s; 
+			transform: rotate(0deg);
+		}
 	}
 }
 
@@ -242,14 +248,20 @@ new-post-form{
 	color: $accent-blue;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	user-select: none;
 }
 
 
 .single-comment-container{
 	margin-bottom: 20px;
 	color: $comment-text-color;
-}
 
+}
+.new-comment-form-textarea{
+	&:focus{
+		outline: 2px solid $accent-blue;
+	}
+}
 .new-comment-form-submit-button{
 	@extend %bad-button;
 }
