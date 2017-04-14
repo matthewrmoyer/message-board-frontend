@@ -10,11 +10,16 @@
     $locationProvider.html5Mode(true)
 
     $stateProvider
+    .state({
+        name: 'home',
+        url: '/',
+        component: 'posts',
+      })
       .state({
         name: 'singlePost',
         url: '/singlePost',
         component: 'singlePost',
       })
-      // etc...
   }
+
 }());
