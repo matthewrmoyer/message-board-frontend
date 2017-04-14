@@ -3,6 +3,12 @@
 	<option value="title">Sort By Title</option>
 	<option value="-created_at">Sort By Time</option>
 </select>
+
+    <new-post-form></new-post-form>
+
+
+
+
 <div ng-repeat="post in $ctrl.posts | filter: {title: $ctrl.searchTerm()} | orderBy:$ctrl.propertyNameToSortBy">
 	
 	<div class = "single-post-container single-post-container-{{post.id}}" data-post-id="{{post.id}}">
@@ -51,5 +57,7 @@
 			<button class = "new-comment-form-submit-button col-xs-10"
 			ng-class="{'primary-button full-opacity': post.newComment.body}">Create Comment</button>
 		</form>
+		
 	</div>
+
 </div>

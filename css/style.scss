@@ -100,6 +100,15 @@ navbar{
 		font-size: calc(#{$single-post-heading-font-size}*1.5);
 		color: $red;
 		transform: rotate(-7deg);
+		a{
+				color: $red;
+			text-decoration: none;
+			&:hover{
+				text-shadow:2px 2px 2px $accent-blue;
+			}
+
+
+		}
 		&:hover{
 			transition: all .25s; 
 			transform: rotate(0deg);
@@ -191,7 +200,11 @@ new-post-form{
 	width: 100%;
 	padding-left: 10px;
 	padding-top: calc(5px + .5vh);
+	a{
+		color: $red;
+	}
 }
+
 
 .single-post-image{
 	width: 20vw;

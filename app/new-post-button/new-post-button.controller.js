@@ -11,9 +11,6 @@
 		function NewPostButtonController(toggleFormService) {
 			const vm = this
 			vm.toggleForm = toggleForm
-
-
-
 			function toggleForm() {
 				//run to toggle showForm boolean
 				toggleFormService.toggleForm()

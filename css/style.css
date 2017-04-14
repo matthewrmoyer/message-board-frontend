@@ -54,6 +54,11 @@ navbar {
     font-size: calc(calc(16px + .5vw)*1.5);
     color: #ed7379;
     transform: rotate(-7deg); }
+    navbar .navbar-logo a {
+      color: #ed7379;
+      text-decoration: none; }
+      navbar .navbar-logo a:hover {
+        text-shadow: 2px 2px 2px #1dc8d7; }
     navbar .navbar-logo:hover {
       transition: all .25s;
       transform: rotate(0deg); }
@@ -122,6 +127,8 @@ new-post-form {
   width: 100%;
   padding-left: 10px;
   padding-top: calc(5px + .5vh); }
+  .title-and-vote-container a {
+    color: #ed7379; }
 
 .single-post-image {
   width: 20vw;

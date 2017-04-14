@@ -1,13 +1,3 @@
-<h1>SINGLE POST COMPONENT</h1>
-
-
-<div>{{$ctrl.postId}}</div>
-<div>{{$ctrl.singlePost}}</div>
-
-
-
-
-
 <div class = "single-post-container single-post-container-{{$ctrl.singlePost.id}}" data-post-id="{{$ctrl.singlePost.id}}">
 		<div class = "title-and-vote-container">
 			<h3 class = "single-post-title"><a ui-sref="singlePost({postId: post.id})">{{$ctrl.singlePost.title}}</a></h3>
