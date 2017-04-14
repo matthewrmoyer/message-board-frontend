@@ -27,7 +27,9 @@
 						})
 
 					})
+					.catch('Error getting comments')
 			})
+			.catch('Error getting posts')
 
 
 
