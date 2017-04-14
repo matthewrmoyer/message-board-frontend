@@ -16,10 +16,11 @@
 		vm.singlePost = {}
 		vm.upvote = upvote
 		vm.downvote = downvote
+		vm.getComments = getComments()
 
 
 
-// <!-- TODO GET COMMENTS -->
+//TODO GET COMMENTS AND THEN ADD TO THE SINGLEPOST OBJECT AS AN ARRAY
 
 
 		vm.$onInit = function() {
@@ -35,6 +36,10 @@
 				vm.singlePost.vote_count = response.data[0].vote_count
 				vm.singlePost.created_at = response.data[0].created_at
 				console.log(vm.singlePost)
+				getComments()
+				console.log(vm.singlePost)
+
+
 			})
 		}
 
@@ -44,6 +49,18 @@
 
 		function singlePost(){
 			return postsService.getSinglePost(vm.postId)
+		}
+
+		function getComments(){
+			var x = postsService.posts
+			x.forEach(element => {
+				if(element.id==vm.postId){
+					console.log(element.comments)
+					vm.singlePost.comments = element.comments
+				}
+			})
+
+
 		}
 
 
