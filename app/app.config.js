@@ -17,7 +17,7 @@
       })
       .state({
         name: 'singlePost',
-        url: '/singlePost',
+        url: '/singlePost/{postId}',
         component: 'singlePost',
       })
   }

@@ -36,6 +36,8 @@
 		this.createPostService = createPostService
 		this.createCommentService= createCommentService
 		this.patchPostService = patchPostService
+		this.getSinglePost = getSinglePost
+
 
 		function createPostService(newPost) {
 			console.log('hitting createPost in postsService')
@@ -69,6 +71,11 @@
 				.then(response => {
 					console.log(response)
 				})
+		}
+
+
+		function getSinglePost(postId){
+			return $http.get(`https://angular-message-board-backend.herokuapp.com/posts/${postId}`)
 		}
 	}
 })()
