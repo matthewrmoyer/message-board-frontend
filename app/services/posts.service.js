@@ -73,9 +73,11 @@
 				})
 		}
 
-
 		function getSinglePost(postId){
 			return $http.get(`https://angular-message-board-backend.herokuapp.com/posts/${postId}`)
 		}
+
+
+	
 	}
 })()

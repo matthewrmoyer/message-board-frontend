@@ -15,21 +15,61 @@
 		vm.posts = posts()
 		vm.singlePost = {}
 
+
+
+
+
+
+		vm.upvote = upvote
+		vm.downvote = downvote
+
+
+
+
+
+
+
+
 		vm.$onInit = function() {
 			vm.postId = $stateParams.postId;
 			console.log(vm.postId)
-			getSinglePost().then(response => {
-				vm.singlePost = response
-			})	
+			//TODO refactor this so it happens in service and then services just sends object in correct format
+			singlePost().then(response => {
+				vm.singlePost.id = response.data[0].id
+				vm.singlePost.author = response.data[0].author
+				vm.singlePost.title = response.data[0].title
+				vm.singlePost.body = response.data[0].body
+				vm.singlePost.image_url = response.data[0].image_url
+				vm.singlePost.vote_count = response.data[0].vote_count
+				vm.singlePost.created_at = response.data[0].created_at
+				console.log(vm.singlePost)
+			})
 		}
 
 		function posts(){
 			return postsService.posts
 		}
 
-		function getSinglePost(){
+		function singlePost(){
 			return postsService.getSinglePost(vm.postId)
 		}
+
+
+		function upvote(post) {
+			post.vote_count++ //frontend
+			//patch backend
+			postsService.patchPostService(post)
+		}
+
+		function downvote(post) {
+			//frontend
+			if (post.vote_count > 0) {
+				post.vote_count--
+			}
+			//patch backend
+			postsService.patchPostService(post)
+		}
+
 	}
 
 })()
