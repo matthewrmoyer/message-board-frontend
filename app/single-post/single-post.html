@@ -11,40 +11,31 @@
 <div class = "single-post-container single-post-container-{{$ctrl.singlePost.id}}" data-post-id="{{$ctrl.singlePost.id}}">
 		<div class = "title-and-vote-container">
 			<h3 class = "single-post-title"><a ui-sref="singlePost({postId: post.id})">{{$ctrl.singlePost.title}}</a></h3>
-
-
-
-
 			<div class = "vote-button-container">
-				
 				<div class = "post-vote-button post-upvote-button" ng-click="$ctrl.upvote($ctrl.singlePost)"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
 				</div>
-
 				<div class = "post-vote-button post-downvote-button" ng-click="$ctrl.downvote($ctrl.singlePost)"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 				</div>
-
-
-
-
 				<span class="vote-count">{{$ctrl.singlePost.vote_count}}</span>
 			</div>
 	<div style = "background-image: url({{$ctrl.singlePost.image_url}})" class = "single-post-image"></div>
 		</div>
-
-
-
-
 		<h4 class = "single-post-author"><i class="fa fa-user-circle" aria-hidden="true"></i>
 		{{$ctrl.singlePost.author}}</h4>
+
+
 		<div class = "time-container">
 			<span>Created</span>
-			<span am-time-ago="post.created_at"></span>
+			<span am-time-ago="$ctrl.singlePost.created_at"></span>
 		</div>
 		<div class = "single-post-body">{{$ctrl.singlePost.body}}</div>
+
+
+<!-- TODO GET COMMENTS -->
 		<div class= "comment-heading-container">
 			<span><i class="fa fa-comment" aria-hidden="true"></i>
 			</span>
-			<span class = "comments-heading" ng-pluralize count=post.comments.length
+			<span class = "comments-heading" ng-pluralize count=$ctrl.singlePost.comments.length
 				when="{
 				'1': '1 Comment',
 				'other': '{{$ctrl.singlePost.comments.length}} Comments'
@@ -57,7 +48,6 @@
 					<p class ="comment"> <span><i class="fa fa-comment" aria-hidden="true"></i> &nbsp {{comment.content}} </p>
 				</div>
 			</div>
-			
 			<label for="newCommentFormBodyInput">Add a Comment...</label>
 			<textarea class = "new-comment-form-textarea newCommentFormBodyInput col-xs-10" name="bodyInput" ng-model="post.newComment.body" required></textarea>
 			

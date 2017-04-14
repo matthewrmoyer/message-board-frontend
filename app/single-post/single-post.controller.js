@@ -14,20 +14,12 @@
 
 		vm.posts = posts()
 		vm.singlePost = {}
-
-
-
-
-
-
 		vm.upvote = upvote
 		vm.downvote = downvote
 
 
 
-
-
-
+// <!-- TODO GET COMMENTS -->
 
 
 		vm.$onInit = function() {
