@@ -25,7 +25,12 @@
 
 		vm.$onInit = function() {
 			console.log(vm.posts)
+			console.log(vm.posts.length)
+			// document.getElementById("loading-notification").style.display = "none";
 			document.getElementById("new-post-button").style.display = "block";
+			if(vm.posts.length > 0){
+				document.getElementById("loading-notification").style.display = "none";
+			}
 		}
 
 		function posts() {

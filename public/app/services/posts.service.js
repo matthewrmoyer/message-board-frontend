@@ -14,7 +14,9 @@
 				response.data.forEach(element => {
 					element.comments = []
 					vm.posts.push(element)
+					document.getElementById("loading-notification").style.display = "none";
 				})
+				
 				$http.get('https://angular-message-board-backend.herokuapp.com/comments')
 					.then(function(response) {
 						response.data.forEach(commentElement => {
