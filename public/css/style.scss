@@ -122,6 +122,9 @@ navbar{
 	margin-top: calc(10px + 1vh);
 }
 .searchbar-input{
+	min-height: 50px;
+	margin-bottom: 10px;
+	font-size: calc(#{$body-font-size} + 5px);
 	height: calc(#{$navbar-height}/2);
 	width: calc(100px + 20vw);
 	box-shadow: 0 0 2px 0px $dark-accent;
@@ -129,6 +132,12 @@ navbar{
 	&:focus{
 			outline: 2px solid $accent-blue;
 		}
+}
+.new-post-button{
+	min-height: 50px;
+	height: calc(#{$navbar-height}/2);
+	width: calc(50px + 10vw);
+	font-size: calc(#{$body-font-size} + 5px);
 }
 
 new-post-form{

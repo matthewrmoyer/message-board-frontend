@@ -25,6 +25,7 @@
 
 		vm.$onInit = function() {
 			console.log(vm.posts)
+			document.getElementById("new-post-button").style.display = "block";
 		}
 
 		function posts() {

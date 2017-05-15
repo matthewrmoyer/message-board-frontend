@@ -69,12 +69,21 @@ navbar {
   margin-top: calc(10px + 1vh); }
 
 .searchbar-input {
+  min-height: 50px;
+  margin-bottom: 10px;
+  font-size: calc(calc(12px + .5vw) + 5px);
   height: calc(calc(25px + 5vh)/2);
   width: calc(100px + 20vw);
   box-shadow: 0 0 2px 0px #333333;
   background-color: #d9d9d9; }
   .searchbar-input:focus {
     outline: 2px solid #1dc8d7; }
+
+.new-post-button {
+  min-height: 50px;
+  height: calc(calc(25px + 5vh)/2);
+  width: calc(50px + 10vw);
+  font-size: calc(calc(12px + .5vw) + 5px); }
 
 new-post-form {
   display: flex;
