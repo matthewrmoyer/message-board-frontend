@@ -37,6 +37,7 @@
 				vm.singlePost.created_at = response.data[0].created_at
 				getComments()
 				console.log(vm.singlePost)
+				document.getElementById("new-post-button").style.display = "none";
 			})
 		}
 

@@ -122,6 +122,9 @@ navbar{
 	margin-top: calc(10px + 1vh);
 }
 .searchbar-input{
+	min-height: 50px;
+	margin-bottom: 10px;
+	font-size: calc(#{$body-font-size} + 5px);
 	height: calc(#{$navbar-height}/2);
 	width: calc(100px + 20vw);
 	box-shadow: 0 0 2px 0px $dark-accent;
@@ -129,6 +132,12 @@ navbar{
 	&:focus{
 			outline: 2px solid $accent-blue;
 		}
+}
+.new-post-button{
+	min-height: 50px;
+	height: calc(#{$navbar-height}/2);
+	width: calc(50px + 10vw);
+	font-size: calc(#{$body-font-size} + 5px);
 }
 
 new-post-form{
@@ -179,6 +188,51 @@ new-post-form{
 	&:focus{
 		outline: 2px solid $accent-blue;
 	}
+}
+
+
+
+.loading-notification{
+	width: 100vw;
+	font-size: 30px;
+	color: $accent-blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $background-grey;
+	height: calc(50px + 10vh);
+	border: 2px solid $accent-blue;
+	p{
+		opacity:0;
+	}
+}
+
+/*animations*/
+@-webkit-keyframes fade-in {
+    from {opacity: 0};
+    to {opacity: 1};
+}
+@keyframes fade-in {
+    from {opacity: 0};
+    to {opacity: 1};
+}
+@-webkit-keyframes fade-out{
+  from {opacity: 1};
+  to {opacity: 0};
+}
+@keyframes fade-out{
+  from {opacity: 1};
+  to {opacity: 0};
+}
+@for $i from 1 to 100 {
+   .loading-notification p:nth-child(#{$i}) {
+    -webkit-animation: fade-in forwards;
+            animation: fade-in forwards;
+    -webkit-animation-duration: .25s;
+            animation-duration: .25s;
+    -webkit-animation-delay: $i * .25s;
+            animation-delay: $i * .25s;
+  } 
 }
 
 .single-post-container{

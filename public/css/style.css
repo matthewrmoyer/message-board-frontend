@@ -69,12 +69,21 @@ navbar {
   margin-top: calc(10px + 1vh); }
 
 .searchbar-input {
+  min-height: 50px;
+  margin-bottom: 10px;
+  font-size: calc(calc(12px + .5vw) + 5px);
   height: calc(calc(25px + 5vh)/2);
   width: calc(100px + 20vw);
   box-shadow: 0 0 2px 0px #333333;
   background-color: #d9d9d9; }
   .searchbar-input:focus {
     outline: 2px solid #1dc8d7; }
+
+.new-post-button {
+  min-height: 50px;
+  height: calc(calc(25px + 5vh)/2);
+  width: calc(50px + 10vw);
+  font-size: calc(calc(12px + .5vw) + 5px); }
 
 new-post-form {
   display: flex;
@@ -109,6 +118,832 @@ new-post-form {
   background-color: #d9d9d9; }
   .sort-select:focus {
     outline: 2px solid #1dc8d7; }
+
+.loading-notification {
+  width: 100vw;
+  font-size: 30px;
+  color: #1dc8d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  height: calc(50px + 10vh);
+  border: 2px solid #1dc8d7; }
+  .loading-notification p {
+    opacity: 0; }
+
+/*animations*/
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+.loading-notification p:nth-child(1) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s; }
+
+.loading-notification p:nth-child(2) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+
+.loading-notification p:nth-child(3) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s; }
+
+.loading-notification p:nth-child(4) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.loading-notification p:nth-child(5) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 1.25s;
+  animation-delay: 1.25s; }
+
+.loading-notification p:nth-child(6) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+
+.loading-notification p:nth-child(7) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s; }
+
+.loading-notification p:nth-child(8) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+.loading-notification p:nth-child(9) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 2.25s;
+  animation-delay: 2.25s; }
+
+.loading-notification p:nth-child(10) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s; }
+
+.loading-notification p:nth-child(11) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 2.75s;
+  animation-delay: 2.75s; }
+
+.loading-notification p:nth-child(12) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s; }
+
+.loading-notification p:nth-child(13) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 3.25s;
+  animation-delay: 3.25s; }
+
+.loading-notification p:nth-child(14) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s; }
+
+.loading-notification p:nth-child(15) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 3.75s;
+  animation-delay: 3.75s; }
+
+.loading-notification p:nth-child(16) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s; }
+
+.loading-notification p:nth-child(17) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 4.25s;
+  animation-delay: 4.25s; }
+
+.loading-notification p:nth-child(18) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 4.5s;
+  animation-delay: 4.5s; }
+
+.loading-notification p:nth-child(19) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 4.75s;
+  animation-delay: 4.75s; }
+
+.loading-notification p:nth-child(20) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s; }
+
+.loading-notification p:nth-child(21) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 5.25s;
+  animation-delay: 5.25s; }
+
+.loading-notification p:nth-child(22) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 5.5s;
+  animation-delay: 5.5s; }
+
+.loading-notification p:nth-child(23) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 5.75s;
+  animation-delay: 5.75s; }
+
+.loading-notification p:nth-child(24) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s; }
+
+.loading-notification p:nth-child(25) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 6.25s;
+  animation-delay: 6.25s; }
+
+.loading-notification p:nth-child(26) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 6.5s;
+  animation-delay: 6.5s; }
+
+.loading-notification p:nth-child(27) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 6.75s;
+  animation-delay: 6.75s; }
+
+.loading-notification p:nth-child(28) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s; }
+
+.loading-notification p:nth-child(29) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 7.25s;
+  animation-delay: 7.25s; }
+
+.loading-notification p:nth-child(30) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 7.5s;
+  animation-delay: 7.5s; }
+
+.loading-notification p:nth-child(31) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 7.75s;
+  animation-delay: 7.75s; }
+
+.loading-notification p:nth-child(32) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s; }
+
+.loading-notification p:nth-child(33) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 8.25s;
+  animation-delay: 8.25s; }
+
+.loading-notification p:nth-child(34) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 8.5s;
+  animation-delay: 8.5s; }
+
+.loading-notification p:nth-child(35) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 8.75s;
+  animation-delay: 8.75s; }
+
+.loading-notification p:nth-child(36) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 9s;
+  animation-delay: 9s; }
+
+.loading-notification p:nth-child(37) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 9.25s;
+  animation-delay: 9.25s; }
+
+.loading-notification p:nth-child(38) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 9.5s;
+  animation-delay: 9.5s; }
+
+.loading-notification p:nth-child(39) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 9.75s;
+  animation-delay: 9.75s; }
+
+.loading-notification p:nth-child(40) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s; }
+
+.loading-notification p:nth-child(41) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 10.25s;
+  animation-delay: 10.25s; }
+
+.loading-notification p:nth-child(42) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 10.5s;
+  animation-delay: 10.5s; }
+
+.loading-notification p:nth-child(43) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 10.75s;
+  animation-delay: 10.75s; }
+
+.loading-notification p:nth-child(44) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 11s;
+  animation-delay: 11s; }
+
+.loading-notification p:nth-child(45) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 11.25s;
+  animation-delay: 11.25s; }
+
+.loading-notification p:nth-child(46) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 11.5s;
+  animation-delay: 11.5s; }
+
+.loading-notification p:nth-child(47) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 11.75s;
+  animation-delay: 11.75s; }
+
+.loading-notification p:nth-child(48) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s; }
+
+.loading-notification p:nth-child(49) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 12.25s;
+  animation-delay: 12.25s; }
+
+.loading-notification p:nth-child(50) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 12.5s;
+  animation-delay: 12.5s; }
+
+.loading-notification p:nth-child(51) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 12.75s;
+  animation-delay: 12.75s; }
+
+.loading-notification p:nth-child(52) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 13s;
+  animation-delay: 13s; }
+
+.loading-notification p:nth-child(53) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 13.25s;
+  animation-delay: 13.25s; }
+
+.loading-notification p:nth-child(54) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 13.5s;
+  animation-delay: 13.5s; }
+
+.loading-notification p:nth-child(55) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 13.75s;
+  animation-delay: 13.75s; }
+
+.loading-notification p:nth-child(56) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 14s;
+  animation-delay: 14s; }
+
+.loading-notification p:nth-child(57) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 14.25s;
+  animation-delay: 14.25s; }
+
+.loading-notification p:nth-child(58) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 14.5s;
+  animation-delay: 14.5s; }
+
+.loading-notification p:nth-child(59) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 14.75s;
+  animation-delay: 14.75s; }
+
+.loading-notification p:nth-child(60) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 15s;
+  animation-delay: 15s; }
+
+.loading-notification p:nth-child(61) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 15.25s;
+  animation-delay: 15.25s; }
+
+.loading-notification p:nth-child(62) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 15.5s;
+  animation-delay: 15.5s; }
+
+.loading-notification p:nth-child(63) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 15.75s;
+  animation-delay: 15.75s; }
+
+.loading-notification p:nth-child(64) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 16s;
+  animation-delay: 16s; }
+
+.loading-notification p:nth-child(65) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 16.25s;
+  animation-delay: 16.25s; }
+
+.loading-notification p:nth-child(66) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 16.5s;
+  animation-delay: 16.5s; }
+
+.loading-notification p:nth-child(67) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 16.75s;
+  animation-delay: 16.75s; }
+
+.loading-notification p:nth-child(68) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 17s;
+  animation-delay: 17s; }
+
+.loading-notification p:nth-child(69) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 17.25s;
+  animation-delay: 17.25s; }
+
+.loading-notification p:nth-child(70) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 17.5s;
+  animation-delay: 17.5s; }
+
+.loading-notification p:nth-child(71) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 17.75s;
+  animation-delay: 17.75s; }
+
+.loading-notification p:nth-child(72) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 18s;
+  animation-delay: 18s; }
+
+.loading-notification p:nth-child(73) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 18.25s;
+  animation-delay: 18.25s; }
+
+.loading-notification p:nth-child(74) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 18.5s;
+  animation-delay: 18.5s; }
+
+.loading-notification p:nth-child(75) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 18.75s;
+  animation-delay: 18.75s; }
+
+.loading-notification p:nth-child(76) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 19s;
+  animation-delay: 19s; }
+
+.loading-notification p:nth-child(77) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 19.25s;
+  animation-delay: 19.25s; }
+
+.loading-notification p:nth-child(78) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 19.5s;
+  animation-delay: 19.5s; }
+
+.loading-notification p:nth-child(79) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 19.75s;
+  animation-delay: 19.75s; }
+
+.loading-notification p:nth-child(80) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 20s;
+  animation-delay: 20s; }
+
+.loading-notification p:nth-child(81) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 20.25s;
+  animation-delay: 20.25s; }
+
+.loading-notification p:nth-child(82) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 20.5s;
+  animation-delay: 20.5s; }
+
+.loading-notification p:nth-child(83) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 20.75s;
+  animation-delay: 20.75s; }
+
+.loading-notification p:nth-child(84) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 21s;
+  animation-delay: 21s; }
+
+.loading-notification p:nth-child(85) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 21.25s;
+  animation-delay: 21.25s; }
+
+.loading-notification p:nth-child(86) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 21.5s;
+  animation-delay: 21.5s; }
+
+.loading-notification p:nth-child(87) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 21.75s;
+  animation-delay: 21.75s; }
+
+.loading-notification p:nth-child(88) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 22s;
+  animation-delay: 22s; }
+
+.loading-notification p:nth-child(89) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 22.25s;
+  animation-delay: 22.25s; }
+
+.loading-notification p:nth-child(90) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 22.5s;
+  animation-delay: 22.5s; }
+
+.loading-notification p:nth-child(91) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 22.75s;
+  animation-delay: 22.75s; }
+
+.loading-notification p:nth-child(92) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 23s;
+  animation-delay: 23s; }
+
+.loading-notification p:nth-child(93) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 23.25s;
+  animation-delay: 23.25s; }
+
+.loading-notification p:nth-child(94) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 23.5s;
+  animation-delay: 23.5s; }
+
+.loading-notification p:nth-child(95) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 23.75s;
+  animation-delay: 23.75s; }
+
+.loading-notification p:nth-child(96) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 24s;
+  animation-delay: 24s; }
+
+.loading-notification p:nth-child(97) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 24.25s;
+  animation-delay: 24.25s; }
+
+.loading-notification p:nth-child(98) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 24.5s;
+  animation-delay: 24.5s; }
+
+.loading-notification p:nth-child(99) {
+  -webkit-animation: fade-in forwards;
+  animation: fade-in forwards;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-delay: 24.75s;
+  animation-delay: 24.75s; }
 
 .single-post-container {
   display: flex;
