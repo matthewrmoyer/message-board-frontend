@@ -44,8 +44,7 @@
 			</div>
 
 
-			<label for="newCommentFormBodyInput">Add a Comment...</label>
-			<textarea class = "new-comment-form-textarea newCommentFormBodyInput col-xs-10" name="bodyInput" ng-model="$ctrl.singlePost.newComment.body" required></textarea>
+			<textarea placeholder="Add a Comment..." class = "new-comment-form-textarea newCommentFormBodyInput col-xs-10" name="bodyInput" ng-model="$ctrl.singlePost.newComment.body" required></textarea>
 			
 			<button class = "new-comment-form-submit-button col-xs-10"
 			ng-class="{'primary-button full-opacity': $ctrl.singlePost.newComment.body}">Create Comment</button>

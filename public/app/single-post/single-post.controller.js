@@ -11,7 +11,6 @@
 	function SinglePostController($stateParams, postsService, $http) {
 		const vm = this
 		vm.postId;
-
 		vm.posts = posts()
 		vm.singlePost = {}
 		vm.upvote = upvote
@@ -38,8 +37,6 @@
 				vm.singlePost.created_at = response.data[0].created_at
 				getComments()
 				console.log(vm.singlePost)
-
-
 			})
 		}
 
